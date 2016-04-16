@@ -12,7 +12,7 @@ namespace IntegrationServer.Workflow
 
         internal static void ExecuteWorkflow(Message message, MessagesBase ctx)
         {
-            var device = ctx.Devices.FirstOrDefault(d => d.Serial == message.DeviceSerial);
+            var device = ctx.Devices.AsNoTracking().FirstOrDefault(d => d.Serial == message.DeviceSerial);
             if(device!=null)
             {
                 Activity wf=null;
@@ -20,8 +20,14 @@ namespace IntegrationServer.Workflow
                     wf = new TimingWorkflow();
                 if (device.WorkflowName == "NotificationWorkflow")
                     wf = new NotificationWorkflow();
-                if(wf!=null)
-                    WorkflowInvoker.Invoke(wf);
+                if (wf != null) {
+                    Dictionary<string, object> inputs = new Dictionary<string, object>();
+                    inputs["Id"] = message.Id;
+                    inputs["Device"] = device;
+                    inputs["Message"] = message;
+
+                    WorkflowInvoker.Invoke(wf, inputs);
+                }
             }
         }
     }

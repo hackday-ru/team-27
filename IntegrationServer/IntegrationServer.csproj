@@ -132,6 +132,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityActions\MessageStatusControl.cs" />
+    <Compile Include="ActivityActions\SMSConnector.cs" />
+    <Compile Include="ActivityActions\TrackMeProConnector.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
