@@ -40,9 +40,11 @@
       <DependentUpon>ClockPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Competitor.cs" />
+    <Compile Include="IHardware.cs" />
     <Compile Include="INfcForms.cs" />
     <Compile Include="NfcFormsTag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />

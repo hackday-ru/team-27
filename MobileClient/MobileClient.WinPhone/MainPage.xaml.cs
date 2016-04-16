@@ -23,6 +23,7 @@ namespace MobileClient.WinPhone
     public sealed partial class MainPage
     {
         public NfcForms x;
+        public Hardware y;
 
         public MainPage()
         {
@@ -31,7 +32,9 @@ namespace MobileClient.WinPhone
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
             Xamarin.Forms.DependencyService.Register<INfcForms, NfcForms>();
+            Xamarin.Forms.DependencyService.Register<IHardware, Hardware>();
             x = Xamarin.Forms.DependencyService.Get<INfcForms>() as NfcForms;
+            y = Xamarin.Forms.DependencyService.Get<IHardware>() as Hardware;
 
             LoadApplication(new MobileClient.App());
         }

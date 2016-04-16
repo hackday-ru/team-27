@@ -11,7 +11,7 @@ namespace MobileClient
 
         public Competitor(string[] tokens)
         {
-            Number = tokens[0];
+            Number = tokens[0].Replace("#","");
             Name = tokens[1];
             Group = tokens[2];
         }

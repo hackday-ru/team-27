@@ -16,6 +16,7 @@ namespace MobileClient
             InitializeComponent();
 
             Xamarin.Forms.Device.StartTimer(TimeSpan.FromMilliseconds(50), UpdateTime);
+            ServerService.Initialize();
 
             INfcForms device = DependencyService.Get<INfcForms>();
             device.NewTag += HandleNewTag;
@@ -34,6 +35,7 @@ namespace MobileClient
                     if (item != null)
                     {
                         item.Time = time;
+                        ServerService.EnqueueData(item);
                         Device.BeginInvokeOnMainThread(() =>
                         {
                             UserDialogs.Instance.Alert(item.ToString(), "test", "test");
