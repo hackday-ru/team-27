@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="TrackMeProTimer.TrackMeProTimer" android:installLocation="auto" android:versionCode="0.0.0.1" android:versionName="demo">
 	<uses-sdk android:minSdkVersion="15" />
-	<application></application>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.NFC" />
+	<application android:label="Track-me pro таймер" android:icon="@drawable/icon"></application>
 </manifest>
