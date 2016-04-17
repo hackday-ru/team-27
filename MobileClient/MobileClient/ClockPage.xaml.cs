@@ -38,7 +38,7 @@ namespace MobileClient
                         ServerService.EnqueueData(item);
                         Device.BeginInvokeOnMainThread(() =>
                         {
-                            UserDialogs.Instance.Alert(item.ToString(), "test", "test");
+                            UserDialogs.Instance.Alert(item.ToString(), "Результат участника", "Ок");
                         });
                     }
                 }

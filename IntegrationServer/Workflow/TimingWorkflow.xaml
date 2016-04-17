@@ -71,6 +71,7 @@
       <AssemblyReference>WebGrease</AssemblyReference>
       <AssemblyReference>Antlr3.Runtime</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>IntegrationServer</AssemblyReference>
@@ -141,7 +142,7 @@
                             <bna:State.Body>
                               <InvokeMethod sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="SendSMS" TargetType="local1:SMSConnector">
                                 <InArgument x:TypeArguments="x:String">
-                                  <mca:CSharpValue x:TypeArguments="x:String">"Получен результат участника #" + Message.SignalId + " на отметке " + Device.Name</mca:CSharpValue>
+                                  <mca:CSharpValue x:TypeArguments="x:String">Message.SignalId + " " + Device.Name</mca:CSharpValue>
                                 </InArgument>
                                 <InArgument x:TypeArguments="x:String">79213825789</InArgument>
                               </InvokeMethod>
@@ -166,7 +167,7 @@
         </bna:Swimlane.Activities>
       </bna:Swimlane>
     </bna:Process.Swimlanes>
-    <sads:DebugSymbol.Symbol>d1FDOlxoYWNrYXRob25FcGFtXEVsZWN0cm9uaWNDaGVja2luXEludGVncmF0aW9uU2VydmVyXFdvcmtmbG93XFRpbWluZ1dvcmtmbG93LnhhbWwMTwOqARECAQFVD1keAgEiZB9uLgIBFHkvfT4CAQ6OAR+TAS4CAQVXE1dSAgEjaSNpcQIBHWYjZnECARlsI2x0AgEVezN7cgIBD5IBSJIBUwIBCpABI5ABsgECAQY=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d1FDOlxoYWNrYXRob25FcGFtXEVsZWN0cm9uaWNDaGVja2luXEludGVncmF0aW9uU2VydmVyXFdvcmtmbG93XFRpbWluZ1dvcmtmbG93LnhhbWwMUAOrARECAQFWD1oeAgEiZR9vLgIBFHovfj4CAQ6PAR+UAS4CAQVYE1hSAgEjaiNqcQIBHWcjZ3ECARltI210AgEVfDN8cgIBD5EBI5EBhQECAQeTAUiTAVMCAQY=</sads:DebugSymbol.Symbol>
   </bna:Process>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -222,14 +223,14 @@
       <sap2010:ViewStateData Id="Transition_18">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:PointCollection x:Key="ConnectorLocation">451,120 481,120 481,108.75 530,108.75</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">461,130 491,130 491,108.75 530,108.75</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="State_3" sap:VirtualizedContainerService.HintSize="328,435">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">329,83</av:Point>
+            <av:Point x:Key="ShapeLocation">339,93</av:Point>
             <av:Size x:Key="ShapeSize">122,74</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -237,7 +238,7 @@
       <sap2010:ViewStateData Id="Transition_19">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:PointCollection x:Key="ConnectorLocation">200,108.75 299,108.75 299,120 329,120</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">200,108.75 228,108.75 228,130 339,130</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>

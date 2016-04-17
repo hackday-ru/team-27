@@ -14,8 +14,14 @@ namespace IntegrationServer.ActivityActions
     {
         public static void SendSMS(string text, string phone)
         {
-            var smsc = new SMSAERO();
-            smsc.send_sms_now(phone, text, 0, 4);
+            WebClient client = new WebClient();
+            ////var url =
+            ////    "https://gate.smsaero.ru/send/?user=fde@mail.ru&password=fdeb1d0a1a0a19ef5536c1bfb9f82af1&to=" + phone + "&text=" + text + "&from=NEWS&type=3&answer=json";
+            var url =
+                "http://smsc.ru/sys/send.php?login=fde001&psw=NRODHLTA&phones=" + phone + "&mes=" + text;
+            client.DownloadString(url); 
+            //var smsc = new SMSAERO();
+            //smsc.send_sms_now(phone, text, 0, 3);
         }
     }
 
@@ -28,8 +34,8 @@ namespace IntegrationServer.ActivityActions
 #warning Нужно проставить параметры регистрации smsaero
 
             const bool DEBUG = true; // Вывод информации об отправке
-            const string SMSAero_LOGIN = "EMAIL"; // логин
-            const string SMSAero_PASSWORD = "PASSWORD"; // ваш пароль (будет преобразован в md5 автоматически)
+            const string SMSAero_LOGIN = "fde@mail.ru"; // логин
+            const string SMSAero_PASSWORD = "NRODHLTA"; // ваш пароль (будет преобразован в md5 автоматически)
             const string From = "SMS_44613"; // подпись отправителя
             const bool POST_type = false; // True = POST тип запроса, False = GET тип запроса
 
@@ -279,8 +285,8 @@ namespace IntegrationServer.ActivityActions
 
             private void _print_debug(string str)
             {
-                Console.WriteLine(str);
-                Console.ReadLine();
+               // Console.WriteLine(str);
+                //Console.ReadLine();
             }
 
             // отправка методом POST
