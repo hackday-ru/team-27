@@ -13,6 +13,7 @@ namespace IntegrationServer.ActivityActions
             using(var ctx = new MessagesBase() )
             {
                 var item = ctx.Messages.First(m => m.Id == id).ProcessingStart = DateTime.UtcNow;
+                ctx.SaveChanges();
             }
         }
 
@@ -21,6 +22,7 @@ namespace IntegrationServer.ActivityActions
             using (var ctx = new MessagesBase())
             {
                 var item = ctx.Messages.First(m => m.Id == id).ProcessingFinish = DateTime.UtcNow;
+                ctx.SaveChanges();
             }
         }
     }
