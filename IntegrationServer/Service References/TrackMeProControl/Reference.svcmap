@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b2d04cf6-2b58-4b40-b33f-fffcdf3f6182" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://track-me.pro/Endpoints/ControlPoint.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ControlPoint.xsd" MetadataType="Schema" ID="fdcdcae4-7835-4b2b-8e6e-8b280416e5d7" SourceId="1" SourceUrl="http://track-me.pro/Endpoints/ControlPoint.svc?xsd=xsd1" />
+    <MetadataFile FileName="ControlPoint1.xsd" MetadataType="Schema" ID="f112e1f1-690c-41cb-b5dc-7f38a8f80231" SourceId="1" SourceUrl="http://track-me.pro/Endpoints/ControlPoint.svc?xsd=xsd2" />
+    <MetadataFile FileName="ControlPoint2.xsd" MetadataType="Schema" ID="c0961104-36cc-43f1-a346-a229029e5ed1" SourceId="1" SourceUrl="http://track-me.pro/Endpoints/ControlPoint.svc?xsd=xsd0" />
+    <MetadataFile FileName="ControlPoint3.xsd" MetadataType="Schema" ID="098f120c-e1cd-425f-952e-9b1f603cbc39" SourceId="1" SourceUrl="http://track-me.pro/Endpoints/ControlPoint.svc?xsd=xsd3" />
+    <MetadataFile FileName="ControlPoint.wsdl" MetadataType="Wsdl" ID="83a412c9-b252-46ac-bcba-6aa28bec37ab" SourceId="1" SourceUrl="http://track-me.pro/Endpoints/ControlPoint.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

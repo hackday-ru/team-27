@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ControlPoint" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://track-me.pro/Endpoints/ControlPoint.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://track-me.pro/Endpoints/ControlPoint.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://track-me.pro/Endpoints/ControlPoint.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/RSP2.Competitions.EndPoints.Models" />
+      <xsd:import schemaLocation="http://track-me.pro/Endpoints/ControlPoint.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IControlPoint_RegisterTimer_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterTimer" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_RegisterTimer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterTimerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_GetStageEntries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStageEntries" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_GetStageEntries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStageEntriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendResults" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendResultsRally_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendResultsRally" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendResultsRally_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendResultsRallyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_GetResultsRally_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultsRally" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_GetResultsRally_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultsRallyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendResultsRallyStart_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendResultsRallyStart" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendResultsRallyStart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendResultsRallyStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendResultsRallyFinish_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendResultsRallyFinish" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendResultsRallyFinish_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendResultsRallyFinishResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendSplitTimes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSplitTimes" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendSplitTimes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSplitTimesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendEvents" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_GetMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessages" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_GetMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendTimeControl_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendTimeControl" />
+  </wsdl:message>
+  <wsdl:message name="IControlPoint_SendTimeControl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendTimeControlResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="false" name="IControlPoint">
+    <wsdl:operation name="RegisterTimer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlPoint/RegisterTimer" message="tns:IControlPoint_RegisterTimer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlPoint/RegisterTimerResponse" message="tns:IControlPoint_RegisterTimer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStageEntries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlPoint/GetStageEntries" message="tns:IControlPoint_GetStageEntries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlPoint/GetStageEntriesResponse" message="tns:IControlPoint_GetStageEntries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendResults">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlPoint/SendResults" message="tns:IControlPoint_SendResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlPoint/SendResultsResponse" message="tns:IControlPoint_SendResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendResultsRally">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlPoint/SendResultsRally" message="tns:IControlPoint_SendResultsRally_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlPoint/SendResultsRallyResponse" message="tns:IControlPoint_SendResultsRally_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultsRally">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlPoint/GetResultsRally" message="tns:IControlPoint_GetResultsRally_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlPoint/GetResultsRallyResponse" message="tns:IControlPoint_GetResultsRally_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendResultsRallyStart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlPoint/SendResultsRallyStart" message="tns:IControlPoint_SendResultsRallyStart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlPoint/SendResultsRallyStartResponse" message="tns:IControlPoint_SendResultsRallyStart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendResultsRallyFinish">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlPoint/SendResultsRallyFinish" message="tns:IControlPoint_SendResultsRallyFinish_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlPoint/SendResultsRallyFinishResponse" message="tns:IControlPoint_SendResultsRallyFinish_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSplitTimes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlPoint/SendSplitTimes" message="tns:IControlPoint_SendSplitTimes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlPoint/SendSplitTimesResponse" message="tns:IControlPoint_SendSplitTimes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlPoint/SendEvents" message="tns:IControlPoint_SendEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlPoint/SendEventsResponse" message="tns:IControlPoint_SendEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlPoint/SendMessage" message="tns:IControlPoint_SendMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlPoint/SendMessageResponse" message="tns:IControlPoint_SendMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlPoint/GetMessages" message="tns:IControlPoint_GetMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlPoint/GetMessagesResponse" message="tns:IControlPoint_GetMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTimeControl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlPoint/SendTimeControl" message="tns:IControlPoint_SendTimeControl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlPoint/SendTimeControlResponse" message="tns:IControlPoint_SendTimeControl_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IControlPoint" type="tns:IControlPoint">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterTimer">
+      <soap:operation soapAction="http://tempuri.org/IControlPoint/RegisterTimer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStageEntries">
+      <soap:operation soapAction="http://tempuri.org/IControlPoint/GetStageEntries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendResults">
+      <soap:operation soapAction="http://tempuri.org/IControlPoint/SendResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendResultsRally">
+      <soap:operation soapAction="http://tempuri.org/IControlPoint/SendResultsRally" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultsRally">
+      <soap:operation soapAction="http://tempuri.org/IControlPoint/GetResultsRally" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendResultsRallyStart">
+      <soap:operation soapAction="http://tempuri.org/IControlPoint/SendResultsRallyStart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendResultsRallyFinish">
+      <soap:operation soapAction="http://tempuri.org/IControlPoint/SendResultsRallyFinish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSplitTimes">
+      <soap:operation soapAction="http://tempuri.org/IControlPoint/SendSplitTimes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEvents">
+      <soap:operation soapAction="http://tempuri.org/IControlPoint/SendEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://tempuri.org/IControlPoint/SendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessages">
+      <soap:operation soapAction="http://tempuri.org/IControlPoint/GetMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTimeControl">
+      <soap:operation soapAction="http://tempuri.org/IControlPoint/SendTimeControl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ControlPoint">
+    <wsdl:port name="BasicHttpBinding_IControlPoint" binding="tns:BasicHttpBinding_IControlPoint">
+      <soap:address location="http://track-me.pro/Endpoints/ControlPoint.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

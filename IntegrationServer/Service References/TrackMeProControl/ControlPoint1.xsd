@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RSP2.Competitions.EndPoints.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RSP2.Competitions.EndPoints.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://track-me.pro/Endpoints/ControlPoint.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfControlPointEntryDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ControlPointEntryDTO" nillable="true" type="tns:ControlPointEntryDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfControlPointEntryDTO" nillable="true" type="tns:ArrayOfControlPointEntryDTO" />
+  <xs:complexType name="ControlPointEntryDTO">
+    <xs:sequence>
+      <xs:element name="_x003C_HasStarted_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Number_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_StartOrder_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ControlPointEntryDTO" nillable="true" type="tns:ControlPointEntryDTO" />
+  <xs:complexType name="ArrayOfControlPointResultDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ControlPointResultDTO" nillable="true" type="tns:ControlPointResultDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfControlPointResultDTO" nillable="true" type="tns:ArrayOfControlPointResultDTO" />
+  <xs:complexType name="ControlPointResultDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FinishTicks" type="xs:long" />
+      <xs:element minOccurs="0" name="Number" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Penalities" nillable="true" type="q1:ArrayOfKeyValueOfstringint" />
+      <xs:element minOccurs="0" name="StageNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="StartTicks" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ControlPointResultDTO" nillable="true" type="tns:ControlPointResultDTO" />
+  <xs:complexType name="ArrayOfControlPointRallyResultDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ControlPointRallyResultDTO" nillable="true" type="tns:ControlPointRallyResultDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfControlPointRallyResultDTO" nillable="true" type="tns:ArrayOfControlPointRallyResultDTO" />
+  <xs:complexType name="ControlPointRallyResultDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FinishTicks" type="xs:long" />
+      <xs:element minOccurs="0" name="Number" type="xs:int" />
+      <xs:element minOccurs="0" name="StageNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="StartTicks" type="xs:long" />
+      <xs:element minOccurs="0" name="TCTicks" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ControlPointRallyResultDTO" nillable="true" type="tns:ControlPointRallyResultDTO" />
+  <xs:complexType name="ArrayOfControlPointSplitTimeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ControlPointSplitTimeDTO" nillable="true" type="tns:ControlPointSplitTimeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfControlPointSplitTimeDTO" nillable="true" type="tns:ArrayOfControlPointSplitTimeDTO" />
+  <xs:complexType name="ControlPointSplitTimeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Number" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Penalities" nillable="true" type="q2:ArrayOfKeyValueOfstringint" />
+      <xs:element minOccurs="0" name="StageNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="TargetTicks" type="xs:long" />
+      <xs:element minOccurs="0" name="Ticks" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ControlPointSplitTimeDTO" nillable="true" type="tns:ControlPointSplitTimeDTO" />
+  <xs:complexType name="ArrayOfControlPointTimeEventDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ControlPointTimeEventDTO" nillable="true" type="tns:ControlPointTimeEventDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfControlPointTimeEventDTO" nillable="true" type="tns:ArrayOfControlPointTimeEventDTO" />
+  <xs:complexType name="ControlPointTimeEventDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EventTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="StageId" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" type="tns:ControlPointTimeEventDTO.TimeEventType" />
+      <xs:element minOccurs="0" name="Value" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ControlPointTimeEventDTO" nillable="true" type="tns:ControlPointTimeEventDTO" />
+  <xs:simpleType name="ControlPointTimeEventDTO.TimeEventType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Start" />
+      <xs:enumeration value="Finish" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ControlPointTimeEventDTO.TimeEventType" nillable="true" type="tns:ControlPointTimeEventDTO.TimeEventType" />
+  <xs:complexType name="ArrayOfControlPointMessageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ControlPointMessageDTO" nillable="true" type="tns:ControlPointMessageDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfControlPointMessageDTO" nillable="true" type="tns:ArrayOfControlPointMessageDTO" />
+  <xs:complexType name="ControlPointMessageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Sender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ControlPointMessageDTO" nillable="true" type="tns:ControlPointMessageDTO" />
+</xs:schema>
